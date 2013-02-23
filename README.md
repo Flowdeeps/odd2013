@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+odd2013
+=======
+
+What is it?
+
+"Spiese oder Scheiße" is a tool to see restaruants by rating and location in Berlin. It uses a demo subset of the non-freely available (only by request) data of official health and safety restaurant ratings in Charlottenburg and Wilmersdorf, Berlin.
+It was created for the Open Data Day 2013 in Berlin.
+
 # Fusion Table Searchable Map Template
 You want to put your data on a searchable, filterable map. This is a free, open source tool to help you do it.
 
@@ -140,11 +147,3 @@ Copyright (c) 2012 Derek Eder. Released under the MIT License.
 
 See [LICENSE](https://github.com/derekeder/FusionTable-Map-Template/wiki/License) for details 
 =======
-odd2013
-=======
-
-What is it?
-
-"Nom und Schade" is a tool to see restaruants by rating and location in Berlin. It uses a demo subset of the non-freely available (only by request) data of official health and safety restaurant ratings in Charlottenburg and Wilmersdorf, Berlin.
-It was created for the Open Data Day 2013 in Berlin.
->>>>>>> f9d3de2d0d76453177b920c987c0248b53fea8e8
