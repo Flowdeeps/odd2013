@@ -25,3 +25,23 @@ a { color: #4B58A6; }
 .filter-red { background-color: #FB6353; }
 
 canvas {-ms-touch-action: double-tap-zoom;}
+
+/* custom styles */
+.well.filters {
+  }
+  .well.filters legend {
+    font-size: 18.75px;
+    }
+  .well.filters span {
+    position: relative;
+    display: block;
+    line-height: 30px;
+    }
+  .well.filters label {
+    margin: 0 0 0 30px;
+    }
+  .well.filters input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    }
