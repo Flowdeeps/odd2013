@@ -47,14 +47,20 @@
           <div class='well'>
             <!-- Once you decide what filter you want, place the HTML code here. The section in the maps_lib.js is also marked. Once you're done, feel free to delete this explanatory section.-->
 
-            <h4>Custom filters and views</h4>
-            <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
-            <ul>
-              <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-checkboxes'>Checkboxes</a></li>
-              <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-radiobuttons'>Radio buttons</a></li>
-              <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-textsearches'>Text searches</a></li>
-              <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results'>Results lists</a></li>
-            </ul>
+            <h4>Filters</h4>
+            <form>
+              <fieldset>
+                <legend>Note</legend>
+                <label for="sehr_gut">Sehr Gut</label>
+                <input type="checkbox" id="sehr_gut" />
+                <label for="gut">Gut</a>
+                <input type="checkbox" id="gut" />
+                <label for="zufriedenstellend">Zufriedenstellend</label>
+                <input type="checkbox" id="zufriedenstellend" />
+                <label for="zufriedenstellend">Ausreichend</label>
+                <input type="checkbox" id="ausreichend" />
+              </fieldset>
+            </form>
           </div>
           <p class='alert alert-info lead' id='result_count'></p>
         </div>
