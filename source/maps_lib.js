@@ -81,6 +81,13 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
+    var type_column = "'Note'";
+    var tempWhereClause = [];
+    if ( $("#gut").is(':checked')) tempWhereClause.push("gut");
+    if ( $("#sehr_gut").is(':checked')) tempWhereClause.push("sehr gut");
+    if ( $("#zufriedenstellend").is(':checked')) tempWhereClause.push("zufriedenstellend");
+    if ( $("#ausreichend").is(':checked')) tempWhereClause.push("ausreichend");
+    whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
 
     //-------end of custom filters--------
 
