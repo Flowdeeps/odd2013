@@ -14,13 +14,13 @@ library(plyr)
 
 ```r
 restos = read.csv("~/dev/odd2013/assets/Restaurant-final-Set - Restaurant final Set.csv")
+restos$Minuspunkte[restos$Note == "sehr gut"] = 0
 restos = transform(restos, street = aaply(paste(Adresse), 1, function(vec) unlist(strsplit(vec, 
     "[0-9]"))[1]), postal = aaply(paste(Adresse), 1, function(vec) strsplit(unlist(strsplit(paste(vec), 
     ", "))[2], " Berlin")[[1]]), extremes = factor(ifelse(Minuspunkte < quantile(restos$Minuspunkte, 
     0.1, na.rm = TRUE), "best 10%", ifelse(Minuspunkte > quantile(restos$Minuspunkte, 
     0.9, na.rm = TRUE), "worst 10%", "")), levels = c("worst 10%", "best 10%", 
     "")))
-restos$Minuspunkte[restos$Note == "sehr gut"] = 0
 ```
 
 ## Distribution of ratings
