@@ -14,6 +14,7 @@ library(plyr)
 
 ```r
 restos = read.csv("~/dev/odd2013/assets/Restaurant-final-Set - Restaurant final Set.csv")
+restos$Minuspunkte[restos$Note == "sehr gut"] = 0
 restos = transform(restos, street = aaply(paste(Adresse), 1, function(vec) unlist(strsplit(vec, 
     "[0-9]"))[1]), postal = aaply(paste(Adresse), 1, function(vec) strsplit(unlist(strsplit(paste(vec), 
     ", "))[2], " Berlin")[[1]]), extremes = factor(ifelse(Minuspunkte < quantile(restos$Minuspunkte, 
@@ -38,5 +39,7 @@ r + geom_text(aes(y = street, label = RestaurantName, color = Note))
 ```
 
 ![plot of chunk name_plot](figure/name_plot.png) 
+
+
 
 

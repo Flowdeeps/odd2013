@@ -11,6 +11,7 @@ library(plyr)
 
 ```{r load}
 restos = read.csv("~/dev/odd2013/assets/Restaurant-final-Set - Restaurant final Set.csv")
+restos$Minuspunkte[restos$Note=="sehr gut"] = 0
 restos = transform(restos,
                    street = aaply(paste(Adresse), 1, 
                                   function(vec) unlist(strsplit(vec, '[0-9]'))[1]),
@@ -33,3 +34,6 @@ r + geom_bar(stat="bin", aes(fill=Note))
 r + geom_text(aes(y=street, label=RestaurantName, color=Note))
 ```
 
+```{r eval=FALSE, echo=FALSE}
+load("~/Desktop/Documents/VIS/brrln/orte/DEU_adm3.RData")
+```
