@@ -89,6 +89,14 @@ var MapsLib = {
     if ( $("#ausreichend").is(':checked')) tempWhereClause.push("ausreichend");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
 
+    
+    var type_column = "'Minuspunkte'";
+    var searchType = type_column ;
+    if ( $("#zero_ten").is(':checked')) whereClause += " AND " + searchType + " >= 0 AND " + searchType + " <= 10";
+    if ( $("#eleven_nineteen").is(':checked')) whereClause += " AND " + searchType + " >= 11 AND " + searchType + " <= 19";
+    if ( $("#twenty_forty").is(':checked')) whereClause += " AND " + searchType + " >= 20 AND " + searchType + " <= 40";
+    if ( $("#fiftyfive_eighty").is(':checked')) whereClause += " AND " + searchType + " >= 55 AND " + searchType + " <= 80";
+   
     //-------end of custom filters--------
 
     if (address != "") {
@@ -103,7 +111,7 @@ var MapsLib = {
           $.address.parameter('radius', encodeURIComponent(MapsLib.searchRadius));
           map.setCenter(MapsLib.currentPinpoint);
           map.setZoom(14);
-
+      
           MapsLib.addrMarker = new google.maps.Marker({
             position: MapsLib.currentPinpoint,
             map: map,
