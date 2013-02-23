@@ -194,6 +194,7 @@ restos = transform(restos, street = aaply(paste(Adresse), 1, function(vec) unlis
     0.1, na.rm = TRUE), &quot;best 10%&quot;, ifelse(Minuspunkte &gt; quantile(restos$Minuspunkte, 
     0.9, na.rm = TRUE), &quot;worst 10%&quot;, &quot;&quot;)), levels = c(&quot;worst 10%&quot;, &quot;best 10%&quot;, 
     &quot;&quot;)))
+restos$Minuspunkte[restos$Note == &quot;sehr gut&quot;] = 0
 </code></pre>
 
 <h2>Distribution of ratings</h2>

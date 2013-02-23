@@ -20,6 +20,7 @@ restos = transform(restos, street = aaply(paste(Adresse), 1, function(vec) unlis
     0.1, na.rm = TRUE), "best 10%", ifelse(Minuspunkte > quantile(restos$Minuspunkte, 
     0.9, na.rm = TRUE), "worst 10%", "")), levels = c("worst 10%", "best 10%", 
     "")))
+restos$Minuspunkte[restos$Note == "sehr gut"] = 0
 ```
 
 ## Distribution of ratings
@@ -38,5 +39,7 @@ r + geom_text(aes(y = street, label = RestaurantName, color = Note))
 ```
 
 ![plot of chunk name_plot](figure/name_plot.png) 
+
+
 
 
